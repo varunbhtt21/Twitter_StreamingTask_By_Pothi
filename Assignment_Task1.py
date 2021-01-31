@@ -125,19 +125,27 @@ while(1):
 		if value == 1:
 			url_unique = url_unique + 1
 
+	
+
+
 	f_task.write("Unique Url is : "+str(url_unique))
 	print("Unique Url is ",url_unique)
 
 	print("Total Url Links ",len(url_dict))
 	f_task.write("\nTotal Url Links "+str(url_unique))
 
+	unique_url = Counter(dict(sorted(url_dict.items(), key=lambda item: item[1])))
+
+	print("\n\nURL        :          Url Count\n")
+	f_task.write("\n\nURL        :          Url Count\n")
+	for key, value in unique_url.items():
+		print(key,"     :       ",value)
+		f_task.write(str(key)+"        :          "+str(value)+"\n")
+
 
 
 	f_task.write("\n\n ------------------------Content Report---------------------------- \n")
 	print("\n\n -------------------------------Content Report---------------------------- \n")
-
-
-	dict(sorted(url_dict.items(), key=lambda item: item[1]))
 
 	twitter_combine = ""
 	for id,tweet in tweets.items():
@@ -168,13 +176,13 @@ while(1):
 	Top10_Occurence = sorted(tweet_count, key=tweet_count.get, reverse=True)[:10]
 	print("\nTop 10 Occurence is ",Top10_Occurence)
 
-	print(len(twitter_id))
-	# twitter_id.clear()
-	# tweets.clear()
-	# name.clear()
-	# url_dict.clear()
-	# final_tweet_list.clear()
-	# tweet_count.clear()
+	
+	twitter_id.clear()
+	tweets.clear()
+	name.clear()
+	url_dict.clear()
+	final_tweet_list.clear()
+	tweet_count.clear()
 
 
 

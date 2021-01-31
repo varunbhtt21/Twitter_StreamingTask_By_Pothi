@@ -141,12 +141,25 @@ while(1):
 
 
 
+	
+
+	f_task.write("Unique Url is : "+str(url_unique))
+	print("Unique Url is ",url_unique)
+
+	print("Total Url Links ",len(url_dict))
+	f_task.write("\nTotal Url Links "+str(url_unique))
+
+	unique_url = Counter(dict(sorted(url_dict.items(), key=lambda item: item[1])))
+
+	print("\n\nURL        :          Url Count\n")
+	f_task.write("\n\nURL        :          Url Count\n")
+	for key, value in unique_url.items():
+		print(key,"     :       ",value)
+		f_task.write(str(key)+"        :          "+str(value)+"\n")
+
+
 	f_task.write("\n\n ------------------------Content Report---------------------------- \n")
 	print("\n\n -------------------------------Content Report---------------------------- \n")
-
-
-	dict(sorted(url_dict.items(), key=lambda item: item[1]))
-
 	
 	for id,tweet in tweets.items():
 		for text in tweet:
