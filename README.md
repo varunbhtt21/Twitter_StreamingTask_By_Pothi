@@ -16,3 +16,12 @@ How to run :
 1. Create a Folder in the current directory, named as Task_1 and Task_2. If it is already present then ignore.
 2. To run the task 1 :  python3 Assignment_Task1.py
 3. To run the task 2 :  python3 Assignment_Task2.py
+
+
+
+Input :
+
+Enter the value of Keyword :
+
+Output :
+It will present as a file inside respective Task_1 and Task_2 folder
